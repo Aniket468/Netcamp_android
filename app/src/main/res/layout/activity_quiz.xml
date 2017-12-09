@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aniketkumar.netcamp_app.Quiz"
+   >
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Quiz"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="193dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="217dp"
+        android:gravity="center"
+
+        android:backgroundTint="#06FFE5"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button15"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button15"
+        android:layout_marginTop="19dp"
+        android:text="Back" />
+
+
+</RelativeLayout>

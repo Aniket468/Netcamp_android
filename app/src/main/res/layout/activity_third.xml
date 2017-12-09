@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aniketkumar.netcamp_app.Third">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="21dp"
+        android:text="Back" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="31dp"
+        app:srcCompat="@android:drawable/ic_dialog_dialer"
+        android:layout_below="@+id/back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/mp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/back"
+        android:layout_alignRight="@+id/back"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="22dp"
+        android:text="Media Player" />
+
+    <Button
+        android:id="@+id/calci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mp"
+        android:layout_centerHorizontal="true"
+        android:text="Calculator" />
+
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/calci"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="Camera" />
+
+    <Button
+        android:id="@+id/magical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mp"
+        android:layout_alignRight="@+id/mp"
+        android:layout_below="@+id/mp"
+        android:layout_marginTop="29dp"
+        android:text="Magical Musical Player" />
+
+    <Button
+        android:id="@+id/Quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/magical"
+        android:layout_centerHorizontal="true"
+        android:text="Quiz" />
+
+    <Button
+        android:id="@+id/game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Quiz"
+        android:layout_alignBottom="@+id/Quiz"
+        android:layout_alignLeft="@+id/camera"
+        android:layout_alignStart="@+id/camera"
+        android:text="Game" />
+</RelativeLayout>
