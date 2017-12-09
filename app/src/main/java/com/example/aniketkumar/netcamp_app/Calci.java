@@ -15,6 +15,7 @@ public class Calci extends AppCompatActivity {
     TextView t1;
     Button add,subs,divi,mul,reset;
     String s1,s2,s3;
+    int p=0,q=0,l=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,//full Screen
@@ -42,12 +43,45 @@ public class Calci extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Enter all field",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    float p, q;
-                    p = Float.parseFloat(s1);
-                    q = Float.parseFloat(s2);
-                    float ans = p + q;
-                    t1.setText("" + ans);
-                    Toast.makeText(getApplicationContext(), "The ans is" + "" + ans, Toast.LENGTH_LONG).show();
+                    p = 0;
+                    q = 0;
+                    l=0;
+                    int o=0;
+
+                    char A[] = s1.toCharArray();
+                    for (int i = 0; i < s1.length(); i++) {
+                        if (Character.isDigit(A[i])) {
+                            p++;
+                        }
+                        if(A[i]=='.'&&Character.isDigit(A[i-1])&&o==0)
+                        {
+                            o=1;
+                            p++;
+                        }
+                    }
+                    char B[] = s2.toCharArray();
+                    for (int i = 0; i < s2.length(); i++) {
+                        if (Character.isDigit(B[i])) {
+                            q++;
+                        }
+                        if(B[i]=='.'&&Character.isDigit(B[i-1])&&l==0)
+                        {
+                           l=1;
+                            q++;
+                        }
+                    }
+                    if ((p == s1.length() && q == s2.length())) {
+                        float p, q;
+                        p = Float.parseFloat(s1);
+                        q = Float.parseFloat(s2);
+
+                        float ans = p + q;
+                        t1.setText("" + ans);
+                        Toast.makeText(getApplicationContext(), "The ans is " + "" + ans, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Enter Number !!",Toast.LENGTH_SHORT).show();
+
+                    }
                 }
             }
         });
@@ -61,12 +95,45 @@ public class Calci extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Enter all field",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    float p, q;
-                    p = Float.parseFloat(s1);
-                    q = Float.parseFloat(s2);
-                    float ans = p - q;
-                    t1.setText("" + ans);
-                    Toast.makeText(getApplicationContext(), "The ans is" + "" + ans, Toast.LENGTH_LONG).show();
+                    p = 0;
+                    q = 0;
+                    l=0;
+                    int o=0;
+
+                    char A[] = s1.toCharArray();
+                    for (int i = 0; i < s1.length(); i++) {
+                        if (Character.isDigit(A[i])) {
+                            p++;
+                        }
+                        if(A[i]=='.'&&Character.isDigit(A[i-1])&&o==0)
+                        {
+                            o=1;
+                            p++;
+                        }
+                    }
+                    char B[] = s2.toCharArray();
+                    for (int i = 0; i < s2.length(); i++) {
+                        if (Character.isDigit(B[i])) {
+                            q++;
+                        }
+                        if(B[i]=='.'&&Character.isDigit(B[i-1])&&l==0)
+                        {
+                            l=1;
+                            q++;
+                        }
+                    }
+                    if ((p == s1.length() && q == s2.length())) {
+                        float p, q;
+                        p = Float.parseFloat(s1);
+                        q = Float.parseFloat(s2);
+
+                        float ans = p - q;
+                        t1.setText("" + ans);
+                        Toast.makeText(getApplicationContext(), "The ans is " + "" + ans, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Enter Number !!",Toast.LENGTH_SHORT).show();
+
+                    }
                 }
             }
         });
@@ -80,12 +147,45 @@ public class Calci extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Enter all field",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    float p, q;
-                    p = Float.parseFloat(s1);
-                    q = Float.parseFloat(s2);
-                    float ans = p * q;
-                    t1.setText("" + ans);
-                    Toast.makeText(getApplicationContext(), "The ans is" + "" + ans, Toast.LENGTH_LONG).show();
+                    p = 0;
+                    q = 0;
+                    l=0;
+                    int o=0;
+
+                    char A[] = s1.toCharArray();
+                    for (int i = 0; i < s1.length(); i++) {
+                        if (Character.isDigit(A[i])) {
+                            p++;
+                        }
+                        if(A[i]=='.'&&Character.isDigit(A[i-1])&&o==0)
+                        {
+                            o=1;
+                            p++;
+                        }
+                    }
+                    char B[] = s2.toCharArray();
+                    for (int i = 0; i < s2.length(); i++) {
+                        if (Character.isDigit(B[i])) {
+                            q++;
+                        }
+                        if(B[i]=='.'&&Character.isDigit(B[i-1])&&l==0)
+                        {
+                            l=1;
+                            q++;
+                        }
+                    }
+                    if ((p == s1.length() && q == s2.length())) {
+                        float p, q;
+                        p = Float.parseFloat(s1);
+                        q = Float.parseFloat(s2);
+
+                        float ans = p * q;
+                        t1.setText("" + ans);
+                        Toast.makeText(getApplicationContext(), "The ans is " + "" + ans, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Enter Number !!",Toast.LENGTH_SHORT).show();
+
+                    }
                 }
             }
         });
@@ -99,12 +199,45 @@ public class Calci extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Enter all field",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    float p, q;
-                    p = Float.parseFloat(s1);
-                    q = Float.parseFloat(s2);
-                    float ans = p / q;
-                    t1.setText("" + ans);
-                    Toast.makeText(getApplicationContext(), "The ans is" + "" + ans, Toast.LENGTH_LONG).show();
+                    p = 0;
+                    q = 0;
+                    l=0;
+                    int o=0;
+
+                    char A[] = s1.toCharArray();
+                    for (int i = 0; i < s1.length(); i++) {
+                        if (Character.isDigit(A[i])) {
+                            p++;
+                        }
+                        if(A[i]=='.'&&Character.isDigit(A[i-1])&&o==0)
+                        {
+                            o=1;
+                            p++;
+                        }
+                    }
+                    char B[] = s2.toCharArray();
+                    for (int i = 0; i < s2.length(); i++) {
+                        if (Character.isDigit(B[i])) {
+                            q++;
+                        }
+                        if(B[i]=='.'&&Character.isDigit(B[i-1])&&l==0)
+                        {
+                            l=1;
+                            q++;
+                        }
+                    }
+                    if ((p == s1.length() && q == s2.length())) {
+                        float p, q;
+                        p = Float.parseFloat(s1);
+                        q = Float.parseFloat(s2);
+
+                        float ans = p / q;
+                        t1.setText("" + ans);
+                        Toast.makeText(getApplicationContext(), "The ans is " + "" + ans, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Enter Number !!",Toast.LENGTH_SHORT).show();
+
+                    }
                 }
             }
         });
